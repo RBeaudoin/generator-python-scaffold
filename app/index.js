@@ -3,6 +3,8 @@ var util = require('util');
 var path = require('path');
 var yeoman = require('yeoman-generator');
 var yosay = require('yosay');
+var figlet = require('figlet');
+var chalk = require('chalk');
 
 var PythonScaffoldGenerator = yeoman.generators.Base.extend({
   initializing: function () {
@@ -12,10 +14,11 @@ var PythonScaffoldGenerator = yeoman.generators.Base.extend({
   prompting: function () {
     var done = this.async();
 
-    // Have Yeoman greet the user.
-    this.log(yosay(
-      'Welcome to the super-duper PythonScaffold generator!'
-    ));
+    console.log( figlet.textSync('Python Scaffold\n', {
+      font: 'Standard',
+      horizontalLayout: 'default',
+      verticalLayout: 'default'
+    }));
 
     var prompts = [
     {

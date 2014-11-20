@@ -1,3 +1,11 @@
+  ____        _   _                   ____             __  __       _     _ 
+ |  _ \ _   _| |_| |__   ___  _ __   / ___|  ___ __ _ / _|/ _| ___ | | __| |
+ | |_) | | | | __| '_ \ / _ \| '_ \  \___ \ / __/ _` | |_| |_ / _ \| |/ _` |
+ |  __/| |_| | |_| | | | (_) | | | |  ___) | (_| (_| |  _|  _| (_) | | (_| |
+ |_|    \__, |\__|_| |_|\___/|_| |_| |____/ \___\__,_|_| |_|  \___/|_|\__,_|
+        |___/                                                               
+
+
 # generator-python-scaffold [![Build Status](https://secure.travis-ci.org/RBeaudoin/generator-python-scaffold.png?branch=master)](https://travis-ci.org/RBeaudoin/generator-python-scaffold)
 
 > [Yeoman](http://yeoman.io) generator
