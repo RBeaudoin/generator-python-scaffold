@@ -68,6 +68,12 @@ var PythonScaffoldGenerator = yeoman.generators.Base.extend({
       name: 'addModuleTests',
       message: 'Would you like to enable unit testing?',
       default: true
+    },
+    {
+      type: 'confirm',
+      name: 'addCommandline',
+      message: 'Would you like to add commandline support?',
+      default: true
     }];
 
     this.prompt(prompts, function (props) {
@@ -79,6 +85,7 @@ var PythonScaffoldGenerator = yeoman.generators.Base.extend({
       this.moduleURL = props.moduleURL;
       this.moduleDescription = props.moduleDescription;
       this.addModuleTests = props.addModuleTests;
+      this.addCommandline = props.addCommandline;      
 
       done();
     }.bind(this));
@@ -88,8 +95,13 @@ var PythonScaffoldGenerator = yeoman.generators.Base.extend({
     app: function () {
       this.dest.mkdir(this.moduleName);
       
-      if(this.testOption){
+      if(this.addModuleTests){
         this.dest.mkdir( this.moduleName + '/tests');
+        this.src.copy('__init__.py','__init__.py')
+      }
+
+      if(this.addCommandline){
+        this.dest.mkdir('bin');
       }
       
       this.template('_setup.py', 'setup.py');

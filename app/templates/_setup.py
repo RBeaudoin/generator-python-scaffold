@@ -10,11 +10,9 @@ setup(name='<%= moduleName %>',
       author='<%= moduleAuthor %>',
       author_email='<%= moduleAuthorEmail %>',
       url='<%= moduleURL %>',
-      classifiers=[
-        'Development Status :: 3 - Alpha',
-        'Programming Language :: Python :: 2.7',
-      ],
-      keywords='fibonacci',
-      license='<%= moduleLicense %>'
+      license='<%= moduleLicense %>',
+      <% if (addCommandline) { %>entry_points = { 
+        'console_scripts': ['<%= moduleName %>=<%= moduleName %>.command_line:main']
+      },<% } %>
       packages=find_packages()
     )
