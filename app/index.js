@@ -97,14 +97,16 @@ var PythonScaffoldGenerator = yeoman.generators.Base.extend({
   writing: {
     app: function () {
       this.dest.mkdir(this.moduleName);
-      
+      this.src.copy('__init__.py',this.moduleName + '/__init__.py');      
+      this.src.copy('_.gitignore','.gitignore');      
+ 
       if(this.addModuleTests){
         this.dest.mkdir( this.moduleName + '/tests');
-        this.src.copy('__init__.py','__init__.py')
+        this.src.copy('__init__.py',this.moduleName + '/tests/__init__.py');
       }
 
       if(this.addCommandline){
-        this.dest.mkdir('bin');
+        this.src.copy('_command_line.py',this.moduleName + '/command_line.py');
       }
       
       this.template('_setup.py', 'setup.py');
