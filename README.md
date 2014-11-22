@@ -10,7 +10,7 @@
 
 ## Overview
 *****
-Yeoman generators are used to scaffold out projects of all types and languages. This particular generator will scaffold out a python module that can be installed with [setuptools](https://pypi.python.org/pypi/setuptools). More details coming soon...
+Yeoman generators are used to scaffold out projects of all types and languages. This particular generator will scaffold out a python module that can be installed with [setuptools](https://pypi.python.org/pypi/setuptools). In order to use this generator, you'llneed to have [Node.js](http://nodejs.org/download/) installed. [NVM](https://github.com/creationix/nvm) is a useful tool to maintain different versions of Node.js on your system. Once Node.js is installed, install yeoman by running ```npm install -g yeoman```. Once that is done, clone this repo, switch to the root directory, and run ```npm link```. With this completed, you can run ```yo generator-python``` in a directory to scaffold out a Python application.
 
 
 
